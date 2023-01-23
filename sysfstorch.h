@@ -23,10 +23,10 @@ private:
     QByteArray sysfsRead(QString path);
 
     const static int m_sysfsSwitchSize = 1;
-    char* m_sysfsSwitch[m_sysfsSwitchSize] = {"/sys/class/leds/led:switch_0/brightness"};
+    char* m_sysfsSwitch[m_sysfsSwitchSize] = {"/tmp/flashlight"};
 
-    const static int m_sysfsPathSize = 2;
-    char* m_sysfsPath[m_sysfsPathSize] = {"/sys/class/leds/led:torch_0/brightness", "/sys/class/leds/flashlight/brightness"};
+    const static int m_sysfsPathSize = 1;
+    char* m_sysfsPath[m_sysfsPathSize] = {"/sys/devices/virtual/camera/flash/rear_flash"};
 
 protected slots:
     void propertyChanged(QString interface, QVariantMap changed_properties, QStringList invalidated_properties);

@@ -1,6 +1,6 @@
 #include "sysfstorch.h"
 
-#define SYSFS_ENABLE 255
+#define SYSFS_ENABLE 1
 
 SysfsTorch::SysfsTorch(QObject *parent) : QObject(parent)
 {
